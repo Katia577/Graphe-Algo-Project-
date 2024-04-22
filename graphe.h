@@ -11,15 +11,19 @@ private:
      std::vector<int> fs;
       std::vector<int> aps;
 
+      std::vector<std::vector<int>> Adj; /** this */
+
     bool oriente; // true pour un graphe orienté, false pour un graphe non orienté
 
 public:
     Graphe(bool estOriente);
-
+     void creerGraphe();
      void afficherFS();
      void afficherAPS();
+     void afficherMatrice_Adjacence();  /** this */
+
      std::vector < std::vector<int>> fs_aps2adj();
-     void adj2fs_aps(std::vector<std::vector<int>> a);
+     void adj2fs_aps();
     // Méthodes pour manipuler le graphe
 };
 
